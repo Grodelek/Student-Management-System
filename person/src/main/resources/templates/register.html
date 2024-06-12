@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="nav-bar">
+    <h1>Student Management System</h1>
+</div>
+    <form action="#" th:action="@{/register}" th:object="${user}" method="POST">
+        <div>
+            <label th:text="${user.login}"></label>Login
+            <input type="text" id="login" th:field="*{login}"/>
+        </div>
+        <div>
+
+        <label th:text="${user.password}">Password</label>Password
+            <input type="password" id="password" th:field="*{password}"/>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

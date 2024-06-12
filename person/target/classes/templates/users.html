@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="nav-bar">
+    <h1>Student Management System</h1>
+</div>
+<tr th:each="user : ${users}">
+    <td th:text="${user.login}"></td>
+    <td th:text="${user.password}"></td>
+</tr>
+<br>
+<form action="/register" method="get">
+    <button class="login-button" type="submit">Register</button>
+</form>
+<form action="/" method="get">
+    <button class="login-button" type="submit">Home</button>
+
+</form>
+
+</body>
+</html>
