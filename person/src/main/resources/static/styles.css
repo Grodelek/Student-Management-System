@@ -7,10 +7,25 @@ body{
     height: 400px;
     border-radius: 10px;
 }
-.login-button,.register-button{
+.form-button{
     background-color: rgba(90, 53, 53, 0.75);
     height: 25px;
     width: 70px;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 5px;
+}
+/*.register-button{ centrowanie buttonow*/
+/*    margin: 0;*/
+/*    position: relative;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    -ms-transform: translate(-50%, -50%);*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+.wrapper-register,.wrapper-home{
+    background-color: rgba(65, 174, 65, 0.51);
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }

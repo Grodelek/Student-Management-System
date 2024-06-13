@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<div class="wrapper-register">
 <div class="nav-bar">
     <h1>Student Management System</h1>
 </div>
@@ -20,8 +21,11 @@
             <input type="password" id="password" th:field="*{password}"/>
         </div>
 
-        <button type="submit">Submit</button>
+        <button class="form-button" type="submit">Submit</button>
     </form>
-
+    <form action="/" method="get">
+        <button class="form-button" type="submit">Home</button>
+    </form>
+</div>
 </body>
 </html>
