@@ -6,24 +6,28 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="nav-bar">
-    <h1>Student Management System</h1>
-</div>
+    <h1 style="text-align: center; font-size: 45px">Student Management System</h1>
+<div class="table-wrapper">
+<table class="student-table">
 <tr th:each="user : ${users}">
-    <td th:text="'Login: '+${user.login}"></td>
     <br>
-    <td>
-        <span th:utext="${'Password: '+'•'.repeat(#strings.length(user.password))}"></span>
-    </td>
+    <td class="student-info" th:text="'Name: '+${user.name}"></td>
+    <td class="student-info" th:text="'Surname: '+${user.surname}"></td>
+    <td class="student-info" th:text="'GPA: '+${user.gpa}"></td>
+    <td class="student-info" th:text="'Phone Number: '+${user.phone}"></td>
     <br>
 </tr>
+</table>
+</div>
 <br>
+<div class="button-container">
 <form action="/register" method="get">
-    <button class="login-button" type="submit">Register</button>
+    <button class="form-button" type="submit">Add Student</button>
 </form>
 <form action="/" method="get">
-    <button class="login-button" type="submit">Home</button>
+    <button class="form-button" type="submit">Home</button>
 </form>
+</div>
 
 </body>
 </html>

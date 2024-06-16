@@ -6,26 +6,32 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<h1 style="text-align: center; font-size: 45px">Student Registration</h1>
 <div class="wrapper-register">
-<div class="nav-bar">
-    <h1>Student Management System</h1>
-</div>
-    <form action="#" th:action="@{/register}" th:object="${user}" method="POST">
-        <div>
-            <label th:text="${user.login}"></label>Login
-            <input type="text" id="login" th:field="*{login}"/>
-        </div>
-        <div>
-
-        <label th:text="${user.password}">Password</label>Password
-            <input type="password" id="password" th:field="*{password}"/>
-        </div>
-
-        <button class="form-button" type="submit">Submit</button>
-    </form>
+    <div class="form-container">
+        <form action="#" th:action="@{/register}" th:object="${user}" method="POST">
+            <div class="form-group">
+            <label th:text="${user.name}"></label>Name
+            <input type="text" id="name" th:field="*{name}"/>
+            </div>
+            <div class="form-group">
+        <label th:text="${user.surname}">Surname</label>Surname
+            <input type="text" id="surname" th:field="*{surname}"/>
+            </div>
+            <div class="form-group">
+        <label th:text="${user.gpa}">GPA</label>GPA
+        <input type="text" id="gpa" th:field="*{gpa}"/>
+            </div>
+            <div class="form-group">
+            <label th:text="${user.phone}">Phone Number</label>Phone Number
+            <input type="text" id="phone" th:field="*{phone}"/>
+            </div>
+            <button class="form-button" type="submit">Submit</button>
+        </form>
     <form action="/" method="get">
         <button class="form-button" type="submit">Home</button>
     </form>
+</div>
 </div>
 </body>
 </html>
