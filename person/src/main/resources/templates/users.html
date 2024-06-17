@@ -15,6 +15,14 @@
     <td class="student-info" th:text="'Surname: '+${user.surname}"></td>
     <td class="student-info" th:text="'GPA: '+${user.gpa}"></td>
     <td class="student-info" th:text="'Phone Number: '+${user.phone}"></td>
+    <td>
+        <div class="button-container">
+            <form th:action="@{/edit}" method="get">
+                <input type="hidden" name="id" th:value="${user.id}" />
+                <button type="submit" class="form-button">Edit</button>
+            </form>
+        </div>
+    </td>
     <br>
 </tr>
 </table>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1 style="text-align: center; font-size: 45px">Edit Student</h1>
+<div class="wrapper-register">
+    <div class="form-container" style="height: 600px">
+        <form th:action="@{/edit}" th:object="${user}" method="POST">
+            <input type="hidden" name="id" th:value="${user.id}" />
+            <div class="form-group">
+                Name
+                <input type="text" id="name" th:field="*{name}"/>
+            </div>
+            <div class="form-group">
+                Surname
+                <input type="text" id="surname" th:field="*{surname}"/>
+            </div>
+            <div class="form-group">
+                GPA
+                <input type="text" id="gpa" th:field="*{gpa}"/>
+            </div>
+            <div class="form-group">
+                Phone Number
+                <input type="text" id="phone" th:field="*{phone}"/>
+            </div>
+            <button class="form-button" type="submit">Update</button>
+        </form>
+
+        <form action="/" method="get">
+            <button class="form-button" type="submit">Home</button>
+        </form>
+        <form action="/users" method="get">
+            <button class="form-button" type="submit">All Users</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
