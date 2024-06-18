@@ -67,4 +67,15 @@ public class UserController {
         return "redirect:/users";
     }
 
+    @GetMapping("/delete")
+    public String deleteUser(@RequestParam long id, @Valid @ModelAttribute User user){
+        try{
+            User existingUser = userService.getUserById(id);
+            userService.deleteUser(existingUser.getId());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return "redirect:/users";
+    }
+
 }

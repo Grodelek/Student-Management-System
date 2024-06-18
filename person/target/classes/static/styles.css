@@ -19,6 +19,17 @@ body{
 .form-button:hover{
     background-color: dodgerblue;
 }
+.delete-button{
+    background-color: #a11f1f;
+    color: antiquewhite;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.delete-button:hover{
+    background-color: red;
+}
 .wrapper-register,.wrapper-home,.table-wrapper,.button-container{
     display: flex;
     justify-content: center;
